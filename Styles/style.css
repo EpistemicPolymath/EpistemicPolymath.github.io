@@ -1,0 +1,122 @@
+html, body {
+  margin: 0;
+  /* used to reset any browser-default margins */
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  /* This truly embodies the full webpage as it is the root element */
+  /* background: url(../Images/ai-close-up-code-160107.jpg) no-repeat center fixed; */
+  background-image: url(../Images/ai-close-up-code-160107.jpg);
+  background-repeat: no-repeat;
+  /* defines if (and how) it will repeat */
+  background-position: center;
+  /* allows you to move a background image (or gradient) around within its container. */
+  background-attachment: fixed;
+  /* specifies how to move the background relative to the viewport. */
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: transparent;
+  /* Counter-acts Bootstrap background */
+}
+
+header div.icons {
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10vw;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row nowrap;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/*Social Media Icons */
+header img.social-icons {
+  margin: 2px;
+  transition: transform 0.5s;
+}
+
+header img:hover.social-icons {
+  transform: scale(1.1);
+}
+
+div.main-container {
+  color: white;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 2em;
+  line-height: 1.2em;
+  height: 100vh;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  /* font-size: 2vw; /* Viewport Width That way the text size will follow the size of the browser window - Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm. */
+  /* Viewport- Percentage Lengths
+
+        The viewport-percentage lengths are relative to the size of the initial containing block. When the height or width of the initial containing block is changed, they are scaled accordingly.
+
+        These units are vh (viewport height), vw (viewport width), vmin (viewport minimum length) and vmax (viewport maximum length).
+
+        We can make use of vh: 1vh is equal to 1% of the viewport's height. That is to say, 100vh is equal to the height of the browser window
+
+        https://stackoverflow.com/questions/1575141/how-to-make-a-div-100-height-of-the-browser-window
+        http://jsfiddle.net/JamesD/hr8sL/
+    */
+}
+
+/* Button Animation */
+.btn-info {
+  content: "Find Out More";
+  /* Not necessary with :before */
+  margin-top: 2em;
+  border: 2px solid rgba(255, 0, 0, 0.2);
+  border-radius: 50px;
+  /* Makes button round */
+  padding: 10px 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.btn-info:hover {
+  transform: scale(1.1);
+}
+
+/* Before anything is done to the button */
+.btn-info:before {
+  content: "Find Out More";
+  transition: all 0.5s;
+}
+
+/* On hover the content within the button moves up */
+.btn-info:hover:before {
+  top: -40px;
+  position: relative;
+}
+
+/* After something is done to the button */
+.btn-info:after {
+  font-family: 'Ionicons';
+  content: "\f127";
+  /*CSS Content for Ionicon Clipboard */
+  font-size: 1em;
+  position: absolute;
+  right: 60px;
+  top: calc(100% + 40px);
+  transition: all 0.5s;
+}
+
+/* After we finish hovering over the button */
+.btn-info:hover:after {
+  top: calc(50% - 12px);
+}
