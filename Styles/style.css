@@ -3,6 +3,7 @@ html, body {
   /* used to reset any browser-default margins */
   height: 100%;
   width: 100%;
+  font-family: 'Raleway', sans-serif;
 }
 
 html {
@@ -16,7 +17,6 @@ html {
   background-attachment: fixed;
   /* specifies how to move the background relative to the viewport. */
   background-size: cover;
-  font-family: 'Raleway', sans-serif;
   font-size: 16px;
 }
 
@@ -111,8 +111,8 @@ div.main-container {
   /*CSS Content for Ionicon Clipboard */
   font-size: 1em;
   position: absolute;
-  right: 60px;
-  top: calc(100% + 40px);
+  right: 62px;
+  top: calc(100% + 30px);
   transition: all 0.5s;
 }
 
